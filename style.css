@@ -139,3 +139,143 @@
     z-index: 5;
     opacity: 1;
 }
+
+/* Large Phone 400px width*/
+@media only screen and (min-width:400px) {
+    .introDisplay h1{
+        font-size: 50px;
+    }
+
+    #startGame{
+        height: 60px;
+        width: 90px;
+        font-size: 30px;
+    }
+
+    .playerDisplay span{
+        font-size: 30px;
+    }
+
+    .gridContent.active{
+        height: 350px;
+        width: 350px;
+      }
+
+    .grid.active{
+    font-size: 70px;
+    }
+
+    .playerWin{
+        height: 225px;
+        width: 275px;
+    }
+
+    .playerWin button{
+        font-size: 25px;
+    }
+
+    #winMessage{
+        font-size: 35px;
+    }
+}
+
+/* 568px - Landscape Mobile*/
+@media only screen and (min-width:568px) {
+    .introDisplay{
+        transform: translate(-50%, -50%);
+    }
+
+    .introDisplay h1{
+        font-size: 40px;
+    }
+
+    #startGame{
+        height:50px;
+        width: 80px;
+        font-size: 20px;
+    }
+
+    .Content{
+        align-items: flex-end;
+    }
+    .playerDisplay span{
+        font-size: 20px;
+    }
+
+    .gridContent.active{
+        height: 160px;
+        width: 160px;
+        margin-bottom: 20px;
+      }
+
+    .grid.active{
+        font-size: 40px;
+    }
+
+    .playerWin{
+        height: 200px;
+        width: 250px;
+        transform: translate(-50%,-50%);
+    }
+
+    .playerWin button{
+        font-size: 20px;
+    }
+
+    #winMessage{
+        font-size: 30px;
+    }
+}
+
+/* 768px - Tablet*/
+@media only screen and (min-width:768px) {
+    .introDisplay h1{
+        font-size: 70px;
+    }
+
+    #startGame{
+        height:80px;
+        width: 110px;
+        font-size: 40px;
+    }
+
+    .Content{
+        align-items: center;
+    }
+
+    .playerDisplay span{
+        font-size: 45px;
+    }
+
+    .gridContent.active{
+        height: 450px;
+        width: 450px;
+      }
+
+    .grid.active{
+        font-size: 100px;
+    }
+
+    .playerWin{
+        height: 400px;
+        width: 450px;
+    }
+
+    .playerWin button{
+        font-size: 40px;
+    }
+
+    #winMessage{
+        font-size: 50px;
+    }
+}
+
+/* 1024px - Small desktop*/
+@media only screen and (min-width:1024px) {
+
+    .gridContent.active{
+        margin-top: 150px;
+        height: 450px;
+        width: 450px;
+      }
+}

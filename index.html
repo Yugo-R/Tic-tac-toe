@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tic-tac-toe game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="introDisplay">
+            <h1>Tic-Tac-Toe Game</h1>
+            <button data-startGame=".introDisplay" id="startGame">Start</button>
+            <div class="playerDisplay">
+                <span data-player="playerOne">Player 1: O</span>
+                <span data-player="playerTwo">Player 2: X</span>
+            </div>
+        </div>
+        <div class="Content">
+            <div class="gridContent">
+                <span class="grid" data-pos="0,0"></span>
+                <span class="grid" data-pos="0,1"></span>
+                <span class="grid" data-pos="0,2"></span>
+                <span class="grid" data-pos="1,0"></span>
+                <span class="grid" data-pos="1,1"></span>
+                <span class="grid" data-pos="1,2"></span>
+                <span class="grid" data-pos="2,0"></span>
+                <span class="grid" data-pos="2,1"></span>
+                <span class="grid" data-pos="2,2"></span>
+            </div>
+        </div>
+        <div class="playerWin">
+            <span id="winMessage">Player X won!</span>
+            <button id="tryAgain">Try again</button>
+        </div>
+        <div class="overlay">
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

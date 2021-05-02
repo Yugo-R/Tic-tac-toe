@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.introDisplay{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    transition: 1s;
+    align-items: center;
+    color: #dfe8f1;
+}
+
+#startGame{
+    height: 30px;
+    width: 60px;
+    margin-top: 15px;
+    background-color: #f1d9bd;
+    border: 1px solid #dba879;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 200ms ease-out;
+    color: #413d3e;
+}
+
+#startGame:hover{
+    background-color: white;
+}
+
+.playerDisplay{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+.playerDisplay span{
+    padding: 5px;
+    width: auto;
+    background-color: #dba879;
+    border-radius: 5px;
+}
+
+.Content{
+    height: 100vh;
+    width: 100vw;
+    background-color: #7bb4bd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridContent.active{
+  display: grid;
+  height: 250px;
+  width: 250px;
+  background-color: aliceblue;
+  border:2px solid cornflowerblue; 
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  transition: 2s ease ; 
+}
+
+.grid.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid cornflowerblue;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.grid.active:hover{
+    background-color: cornsilk;
+    transition: 0s none;
+}
+
+.playerWin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    height: 200px;
+    width: 250px;
+    position: fixed;
+    transform: translate(-50%,-70%);
+    transition: 1s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.playerWin.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.playerWin button{
+    padding: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.overlay{
+    z-index: -1;
+    position: fixed;
+    transition: 500ms ease;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0, 0, .5);
+}
+
+.overlay.active{
+    z-index: 5;
+    opacity: 1;
+}

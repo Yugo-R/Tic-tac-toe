@@ -17,13 +17,14 @@
 }
 
 #startGame{
-    height: 30px;
-    width: 60px;
+    height: 50px;
+    width: 80px;
     margin-top: 15px;
     background-color: #f1d9bd;
     border: 1px solid #dba879;
     outline: none;
     cursor: pointer;
+    font-size: 20px;
     font-weight: bold;
     transition: 200ms ease-out;
     color: #413d3e;
@@ -45,7 +46,6 @@
 .playerDisplay span{
     padding: 5px;
     width: auto;
-    background-color: #dba879;
     border-radius: 5px;
 }
 
@@ -63,7 +63,6 @@
   height: 250px;
   width: 250px;
   background-color: aliceblue;
-  border:2px solid cornflowerblue; 
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(3,1fr);
   transition: 2s ease ; 

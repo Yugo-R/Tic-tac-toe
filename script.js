@@ -5,6 +5,9 @@ const playAgain = document.getElementById('tryAgain');
 const overlay = document.querySelector('.overlay');
 
 let stateGame = (function(){
+    const playerOne = document.querySelector('#playerOne');
+    const playerTwo = document.querySelector('#playerTwo');
+
     let boardGame = [
         [0,0,0],
         [0,0,0],
@@ -18,15 +21,22 @@ let stateGame = (function(){
     let nextTurn = () =>{
         if(sign == ''){
             sign = 'O';
+            playerTwo.style.backgroundColor = '#dba879';
+            playerOne.style.backgroundColor = '';
             return sign
+            
         }
         else{
             if(sign == 'O'){
                 sign = 'X';
+                playerOne.style.backgroundColor = '#dba879';
+                playerTwo.style.backgroundColor = '';
                 return sign
             }
             else{
                 sign = 'O'
+                playerTwo.style.backgroundColor = '#dba879';
+                playerOne.style.backgroundColor = '';
                 return sign;
             }
         }
@@ -79,6 +89,11 @@ let stateGame = (function(){
         ]
 
         counter = 0;
+
+        sign = '';
+
+        playerOne.style.backgroundColor = '#dba879';
+        playerTwo.style.backgroundColor = '';
     }
 
     return {nextTurn, checkWinner, resetBoard};
@@ -99,17 +114,18 @@ startGame.addEventListener('click', (e) =>{
         let playerDisplay = document.getElementsByClassName('playerDisplay')[0];
         playerDisplay.style.opacity = '1';
         gameStart();
+        stateGame.resetBoard();
     });
 });
 
 display.addEventListener('click', (e)=>{
     if(e.target.className == 'grid active'){
         if(!e.target.innerText){
-            e.target.innerText = stateGame.nextTurn();
             let result = stateGame.checkWinner(e.target.dataset.pos);
             if(result == 3 || result == -3 || result == 9){
                 playerWinner(result);
             };
+            e.target.innerText = stateGame.nextTurn();
         }
         else{
             return;

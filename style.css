@@ -16,6 +16,10 @@
     color: #dfe8f1;
 }
 
+.introDisplay h1{
+    font-size: 35px;
+}
+
 #startGame{
     height: 50px;
     width: 80px;
@@ -47,6 +51,7 @@
     padding: 5px;
     width: auto;
     border-radius: 5px;
+    font-size: 20px;
 }
 
 .Content{
@@ -65,7 +70,7 @@
   background-color: aliceblue;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(3,1fr);
-  transition: 2s ease ; 
+  transition: 1.5s ease ;
 }
 
 .grid.active{
@@ -81,7 +86,6 @@
 
 .grid.active:hover{
     background-color: cornsilk;
-    transition: 0s none;
 }
 
 .playerWin{
@@ -112,6 +116,11 @@
     border: none;
     outline: none;
     cursor: pointer;
+    font-size: 20px;
+}
+
+#winMessage{
+    font-size: 30px;
 }
 
 .overlay{

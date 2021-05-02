@@ -118,20 +118,23 @@ startGame.addEventListener('click', (e) =>{
     });
 });
 
-display.addEventListener('click', (e)=>{
-    if(e.target.className == 'grid active'){
-        if(!e.target.innerText){
-            let result = stateGame.checkWinner(e.target.dataset.pos);
-            if(result == 3 || result == -3 || result == 9){
-                playerWinner(result);
-            };
-            e.target.innerText = stateGame.nextTurn();
+display.addEventListener('transitionend',()=>{
+    display.addEventListener('click', (e)=>{
+        if(e.target.className == 'grid active'){
+            if(!e.target.innerText){
+                e.target.innerText = stateGame.nextTurn();
+                let result = stateGame.checkWinner(e.target.dataset.pos);
+                if(result == 3 || result == -3 || result == 9){
+                    playerWinner(result);
+                };
+                
+            }
+            else{
+                return;
+            }
         }
-        else{
-            return;
-        }
-    }
-})
+    })
+});
 
 playAgain.addEventListener('click', ()=>{
     modalWin.classList.remove('active');
